@@ -1,7 +1,7 @@
 # 物联网开发小组帮助面板
 ## 环境配置类
 
-### windows工作环境下ide的安装和相关语言环境的配置
+### windows工作环境下工具的安装和相关语言环境的配置
 
 #### PyCharm(python)
 
@@ -23,7 +23,21 @@ jdk官方下载链接：http://www.oracle.com/technetwork/java/javase/downloads/
 
 具体教材如下：http://www.hankcs.com/program/cpp/jetbrains-clion.html
 
+
+
 ### vagrant虚拟机配置
+
+关于vagrant环境的配置，可以参照网上的教程（教程地址：https://www.cnblogs.com/alexyang8/p/3380936.html，笔者本人的博客地址：https://www.cnblogs.com/HansBug/p/7403306.html）
+
+在选择镜像的时候，可以在官方网站上搜寻想要的镜像（官网镜像搜索地址：https://app.vagrantup.com/boxes/search）。
+
+在选择镜像的时候，有几点建议：
+
+* 注意看系统的版本，确定是自己最需要的版本
+* 注意看镜像所支持的虚拟机版本（virtualbox or vmware，不过推荐使用vmware的镜像）
+* 注意镜像的最近维护时间（即右边的Released项），建议优先选择近期仍在维护的（近期依然在不断更新的镜像在后期环境配置的时候会少很多不必要的麻烦）
+
+此外，笔者选择的镜像版本是：https://app.vagrantup.com/ubuntu/boxes/xenial64 （ubuntu16.04，7.13日仍在维护，且笔者实测使用起来体验很不错），centos系统推荐：https://app.vagrantup.com/albmtez/boxes/centos7-x64（centos7，也是近几天仍在维护）
 
 
 
@@ -33,7 +47,7 @@ jdk官方下载链接：http://www.oracle.com/technetwork/java/javase/downloads/
 
 如果你使用的是vagrant虚拟机的话，那么一开始你的镜像源将是ubuntu的官方镜像源。类似这样
 
-```
+```c
 ## Note, this file is written by cloud-init on first boot of an instance
 ## modifications made here will not survive a re-bundle.
 ## if you wish to make changes you can:
@@ -75,7 +89,7 @@ deb-src http://archive.ubuntu.com/ubuntu xenial-updates multiverse
 
 所以一般采取的方式是替换为清华大学的国内镜像源，具体做法是讲`/etc/apt/sources.list`文件替换为（需要sudo权限）
 
-```
+```c
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
@@ -89,11 +103,11 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted
 
 替换完毕后，运行
 
-```bash
+```shell
 sudo apt-get update
 ```
 
-在运行
+再运行
 
 ```bash
 sudo apt-get upgrade
@@ -107,15 +121,17 @@ sudo apt-get upgrade
 
 具体操作是，将`~/.pip/pip.conf`内容替换为（如果文件或路径不存在则手动创建）
 
-```sh
+```c
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 trusted-host = pypi.tuna.tsinghua.edu.cn
 ```
 
+
+
 ### ubuntu16内java环境配置
 
-**JAVA暂时采用oracle官方提供的java8**（而不是OpenJDK，这一点需要注意）
+**JAVA采用oracle官方提供的java8**（而不是OpenJDK，这一点需要注意）
 
 一种安装方式是用和windows类似的下载+配置环境法，不过这边更推荐一种更快速的方法——直接通过添加PPA源，使用apt-get安装。
 
