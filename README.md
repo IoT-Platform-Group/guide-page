@@ -34,7 +34,7 @@ jdk官方下载链接：http://www.oracle.com/technetwork/java/javase/downloads/
 在选择镜像的时候，有几点建议：
 
 * 注意看系统的版本，确定是自己最需要的版本
-* 注意看镜像所支持的虚拟机版本（virtualbox or vmware，不过推荐使用vmware的镜像）
+* 注意看镜像所支持的虚拟机版本（virtualbox or vmware，不过推荐使用virtualbox的镜像）
 * 注意镜像的最近维护时间（即右边的Released项），建议优先选择近期仍在维护的（近期依然在不断更新的镜像在后期环境配置的时候会少很多不必要的麻烦）
 
 此外，笔者选择的镜像版本是：https://app.vagrantup.com/ubuntu/boxes/xenial64 （ubuntu16.04，7.13日仍在维护，且笔者实测使用起来体验很不错），centos系统推荐：https://app.vagrantup.com/albmtez/boxes/centos7-x64（centos7，也是近几天仍在维护）
