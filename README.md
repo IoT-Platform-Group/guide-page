@@ -138,3 +138,24 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
 教材地址如下：https://www.cnblogs.com/iban/p/5540854.html
 
 手动安装教材如下：https://www.cnblogs.com/ccskun/p/5534757.html
+
+
+
+## 实际操作类
+
+### californium实践
+
+#### 入门实践（简单server、简单client、简单上行请求）
+
+1. CoAP测试服务器 [wsncoap.org](http://wsncoap.org)
+
+   【重要】**Coap协议介绍，及其开源实现Californium实战**：https://blog.csdn.net/ty497122758/article/details/77387861
+
+   californium 框架设计分析：https://blog.csdn.net/t91zzh5f/article/details/57145167
+
+2. 开源实现
+
+   维基百科：http://en.wikipedia.org/wiki/Constrained_Application_Protocol
+
+   其中两个开源版本：libcoap（C语言实现）和Californium（java语言实现），比较实用。
+
