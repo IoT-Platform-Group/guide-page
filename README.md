@@ -159,3 +159,74 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
 
    其中两个开源版本：libcoap（C语言实现）和Californium（java语言实现），比较实用。
 
+
+
+## 规范
+
+### 工具版本
+
+#### java版本
+
+请使用oracle官网提供的jdk8版本（笔者使用的版本是`jdk-8u171-windows-x64`）
+
+### 代码规范
+
+
+
+### 设计规范
+
+#### 单例模式的设计
+
+单例模式的常见写法见此博客：https://www.cnblogs.com/zhaoyan001/p/6365064.html
+
+推荐使用**双重检查**和**静态内部类**写法，以保证性能和线程安全性。（笔者本人推荐使用静态内部类写法）
+
+* 双重检查示例
+
+  ```java
+  public class Singleton {
+  
+      private static volatile Singleton singleton;
+  
+      private Singleton() {}
+  
+      public static Singleton getInstance() {
+          if (singleton == null) {
+              synchronized (Singleton.class) {
+                  if (singleton == null) {
+                      singleton = new Singleton();
+                  }
+              }
+          }
+          return singleton;
+      }
+  }
+  ```
+
+
+
+* 静态内部类示例
+
+  ```java
+  public class Singleton {
+  
+      private Singleton() {}
+  
+      private static class SingletonInstance {
+          private static final Singleton INSTANCE = new Singleton();
+      }
+  
+      public static Singleton getInstance() {
+          return SingletonInstance.INSTANCE;
+      }
+  }
+  ```
+
+  
+
+以上
+
+
+
+
+
