@@ -161,6 +161,16 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
 
 
 
+### spring-boot实践
+
+spring-boot是一个在java上快速构建MVC服务端的依赖，笔者实测，非常简单易用。
+
+spring-boot快速入手教程（直接翻到最后一部分）：https://www.cnblogs.com/aishangJava/p/5971288.html
+
+spring-boot官方文档（英文）：https://docs.spring.io/spring-boot/docs/current/reference/pdf/spring-boot-reference.pdf
+
+
+
 ## 规范
 
 ### 工具版本
@@ -230,3 +240,4 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
 
 
 
+(23333)
