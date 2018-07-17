@@ -143,6 +143,23 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
 
 ## 实际操作类
 
+### Mavan相关实践
+
+Maven是一个快速管理Java工程和工程相关依赖的工具。
+
+在IDEA里，我们可以免安装快速使用maven来对项目进行依赖管理
+
+不仅如此，Maven有相当完整的线上生态圈。
+
+Maven相关基础教程可以直接百度或者看之前写过的实例即可。
+
+Maven搜索页面
+
+* 官方版（**需要翻墙**，需要记录下`groupId`、`artifactId`和`version`并手动配置xml）：http://search.maven.org/
+* 另一个搜索页面（不需要翻墙，且用户体验更好，**但是部分包会搜不到**）：http://mvnrepository.com/
+
+
+
 ### californium实践
 
 #### 入门实践（简单server、简单client、简单上行请求）
@@ -168,6 +185,39 @@ spring-boot是一个在java上快速构建MVC服务端的依赖，笔者实测�
 spring-boot快速入手教程（直接翻到最后一部分）：https://www.cnblogs.com/aishangJava/p/5971288.html
 
 spring-boot官方文档（英文）：https://docs.spring.io/spring-boot/docs/current/reference/pdf/spring-boot-reference.pdf
+
+
+
+### QuickHttp实践
+
+QuickHttp是一个超级简单易用的Http访问框架，用于快速生成Http请求并执行访问。
+
+入手教程、GitHub库地址：https://github.com/fcibook/QuickHttp
+
+Maven依赖：
+
+```xml
+<dependency>
+    <groupId>com.fcibook.quick</groupId>
+    <artifactId>quick-http</artifactId>
+    <version>1.3</version>
+</dependency>
+```
+
+**【注意】另外还需要安装的依赖：**
+
+```xml
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>fluent-hc</artifactId>
+    <version>4.4.1</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpmime</artifactId>
+    <version>4.4.1</version>
+</dependency>
+```
 
 
 
