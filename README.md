@@ -282,11 +282,16 @@ Maven依赖：
   }
   ```
 
-  
-
-以上
 
 
+
+### 技术文档
+
+#### CoAP协议规范文档
+
+官方文档地址：https://tools.ietf.org/html/rfc7252
+
+文档pdf：[rcf7252.pdf](rcf7252.pdf)
 
 
 
